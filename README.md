@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fast Food Project
 
-## Getting Started
+A modern web application for ordering fast food online, built with Next.js 15, React 19, and TypeScript. The application features a beautiful, responsive UI powered by Tailwind CSS that works perfectly on both desktop and mobile devices.
 
-First, run the development server:
+## 🚀 Features
+
+- Next.js 15 with App Router
+- React 19
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Shadcn UI components for accessible UI elements
+- ESLint and Prettier for code quality
+- Turbopack for faster development
+
+## 📋 Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm, yarn, or bun package manager
+
+## 🛠️ Installation
+
+1. Clone the repository:
+
+```bash
+git clone [your-repository-url]
+cd fast-food
+```
+
+2. Install dependencies:
+
+```bash
+# Using npm
+npm install
+
+# Using yarn
+yarn install
+
+# Using bun
+bun install
+```
+
+## 🏃‍♂️ Running the Project
+
+### Development Mode
 
 ```bash
 npm run dev
 # or
 yarn dev
 # or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server will start at `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+# or
+bun run build
+bun run start
+```
 
-## Learn More
+## 🧪 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `dev` - Start development server with Turbopack
+- `build` - Create production build
+- `start` - Start production server
+- `lint` - Run ESLint for code linting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+fast-food/
+├── app/              # Next.js app directory
+├── components/       # React components
+├── lib/             # Utility functions and shared logic
+├── public/          # Static assets
+└── ...config files
+```
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI
+- **Code Quality**: ESLint, Prettier
+- **Package Manager**: npm/yarn/bun
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 License
+
+This project is private and proprietary.
+
+## 🤝 Contributing
+
+This is a private project. Please contact the maintainers for contribution guidelines.
