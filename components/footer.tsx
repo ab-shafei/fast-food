@@ -11,7 +11,7 @@ export const Footer = () => {
           <Link className="font-bold text-[#3b3b3b]" href="/">
             Home
           </Link>
-          <Link className="font-bold text-[#3b3b3b]" href="/menu">
+          <Link className="font-bold text-[#3b3b3b]" href="/our-menu">
             Our Menu
           </Link>
           <Link className="font-bold text-[#3b3b3b]" href="/offers">
