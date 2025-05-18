@@ -16,6 +16,7 @@ import { useMediaQuery } from "@reactuses/core";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { CartDrawer } from "./cart-drawer";
 
 const routes = [
   {
@@ -38,6 +39,7 @@ const routes = [
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const pathname = usePathname();
 
@@ -50,9 +52,25 @@ export const Header = () => {
     }
   }, [isDesktop]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="absolute w-full text-[#e1e1e1]">
-      <div className="flex w-full justify-between px-4 pt-4 lg:px-9">
+    <header
+      className={cn(
+        "fixed z-50 w-full text-[#e1e1e1]",
+        scrolled
+          ? "border-b border-white/10 bg-black/30 backdrop-blur-md"
+          : "bg-transparent transition",
+      )}
+    >
+      <div className="flex w-full items-center justify-between px-4 py-2 lg:px-9">
         <div>
           <Link href="/" className="">
             <Image
@@ -83,6 +101,9 @@ export const Header = () => {
               ))}
             </ul>
           </nav>
+        </div>
+        <div>
+          <CartDrawer />
         </div>
         <div
           onClick={() => setIsOpen(true)}

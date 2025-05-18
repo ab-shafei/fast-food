@@ -3,66 +3,77 @@ import { cn } from "@/lib/utils";
 
 const offers = [
   {
+    id: "1",
     title: "Deal Of The Day",
     description: "Quinoa & Black Bean Burger",
     price: 17,
     backgroundImage: "/images/bg-05-free-img.jpg",
   },
   {
+    id: "2",
     title: "Wedges Day",
     description: "Crispy Garlic Baked Potato Wedges",
     price: 15,
     backgroundImage: "/images/bg-06-free-img.jpg",
   },
   {
+    id: "3",
     title: "The Burger of The Month",
     description: "The Farmhouse Burger",
     price: 13,
     backgroundImage: "/images/bg-07-free-img.jpg",
   },
   {
+    id: "4",
     title: "Deal Of The Day",
     description: "Quinoa & Black Bean Burger",
     price: 17,
     backgroundImage: "/images/bg-05-free-img.jpg",
   },
   {
+    id: "5",
     title: "Wedges Day",
     description: "Crispy Garlic Baked Potato Wedges",
     price: 15,
     backgroundImage: "/images/bg-06-free-img.jpg",
   },
   {
+    id: "6",
     title: "The Burger of The Month",
     description: "The Farmhouse Burger",
     price: 13,
     backgroundImage: "/images/bg-07-free-img.jpg",
   },
   {
+    id: "7",
     title: "Deal Of The Day",
     description: "Quinoa & Black Bean Burger",
     price: 17,
     backgroundImage: "/images/bg-05-free-img.jpg",
   },
   {
+    id: "8",
     title: "Wedges Day",
     description: "Crispy Garlic Baked Potato Wedges",
     price: 15,
     backgroundImage: "/images/bg-06-free-img.jpg",
   },
   {
+    id: "9",
     title: "Wedges Day",
     description: "Crispy Garlic Baked Potato Wedges",
     price: 15,
     backgroundImage: "/images/bg-06-free-img.jpg",
   },
   {
+    id: "10",
     title: "The Burger of The Month",
     description: "The Farmhouse Burger",
     price: 13,
     backgroundImage: "/images/bg-07-free-img.jpg",
   },
   {
+    id: "11",
     title: "The Burger of The Month",
     description: "The Farmhouse Burger",
     price: 13,
@@ -82,7 +93,8 @@ export default function Offers() {
       <div className="bg-foreground grid grid-cols-1 gap-5 lg:grid-cols-2">
         {offers.map((offer, index) => (
           <Offer
-            key={`${index}-${offer.title}`}
+            key={`${index}-${offer.id}-${offer.title}`}
+            id={offer.id}
             title={offer.title}
             description={offer.description}
             price={offer.price}

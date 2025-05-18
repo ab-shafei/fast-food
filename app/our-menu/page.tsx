@@ -26,40 +26,52 @@ const offers = [
 
 const menu = [
   {
+    id: "1",
     title: "Fatboy Burger",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-02-free-img.png",
+    price: 10,
   },
   {
+    id: "2",
     title: "Classic Smash",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-03-free-img.png",
+    price: 10,
   },
   {
+    id: "3",
     title: "Bacon Burger",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-04-free-img.png",
+    price: 10,
   },
   {
+    id: "4",
     title: "Burger Nine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-05-free-img.png",
+    price: 10,
   },
   {
+    id: "5",
     title: "Chicken Burger",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-06-free-img.png",
+    price: 10,
   },
   {
+    id: "6",
     title: "Beef Burger",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
     image: "/images/burger-07-free-img.png",
+    price: 10,
   },
 ];
 
@@ -160,10 +172,12 @@ export default function OurMenu() {
           <div className="grid w-full gap-5 gap-y-14 px-5 text-black sm:grid-cols-3">
             {menu.map((item, index) => (
               <MenuItem
+                id={item.id}
                 key={`${index}-${item.title}`}
                 title={item.title}
                 description={item.description}
                 image={item.image}
+                price={item.price}
               />
             ))}
           </div>
